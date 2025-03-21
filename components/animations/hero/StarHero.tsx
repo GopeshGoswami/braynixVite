@@ -12,7 +12,7 @@ export default function StarHero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
+        <p className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
           <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
             Elevate Your Digital Vision
           </span>
@@ -24,7 +24,7 @@ export default function StarHero() {
           >
             Crafting Exceptional Websites
           </span>
-        </h1>
+        </p>
 
         <div>
           <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">

@@ -26,7 +26,7 @@ export default function BentoGridTwo() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto space-y-24 px-4">
+      <section className="max-w-7xl mx-auto space-y-[52px] md:space-y-24 px-4">
         <h2 className="text-3xl md:text-6xl text-center">Our Services</h2>
         <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[20rem]">
           {items.map((item, i) => (

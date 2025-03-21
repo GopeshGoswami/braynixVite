@@ -32,7 +32,7 @@ const items = [
 
 function FaqNew() {
   return (
-    <div className="space-y-4 max-w-5xl mx-auto">
+    <div className="space-y-4 max-w-5xl mx-auto px-4">
       <div className="mx-auto flex  flex-col text-left md:text-center">
         <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
           Frequently asked questions

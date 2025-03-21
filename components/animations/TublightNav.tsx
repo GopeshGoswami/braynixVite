@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "../../lib/utils";
@@ -34,7 +32,7 @@ export function NavBar({ items, className }: NavBarProps) {
   return (
     <div
       className={cn(
-        "fixed bottom-0 sm:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6",
+        "fixed top-0 left-1/2 -translate-x-1/2 z-50 mb-6 pt-6",
         className
       )}
     >
@@ -66,9 +64,9 @@ export function NavBar({ items, className }: NavBarProps) {
                   isActive && "bg-muted text-primary"
                 )}
               >
-                <span className="hidden md:inline">{item.name}</span>
-                <span className="md:hidden">{item.icon}</span>
-                {isActive && (
+                <span className="inline">{item.name}</span>
+                {/* <span className="md:hidden">{item.icon}</span> */}
+                {/* {isActive && (
                   <motion.div
                     layoutId="lamp"
                     className="absolute inset-0 w-full bg-primary/5 rounded-full -z-10"
@@ -85,7 +83,7 @@ export function NavBar({ items, className }: NavBarProps) {
                       <div className="absolute w-4 h-4 bg-primary/20 rounded-full blur-sm top-0 left-2" />
                     </div>
                   </motion.div>
-                )}
+                )} */}
               </a>
 
               {/* Animated Dropdown */}

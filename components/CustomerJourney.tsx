@@ -204,24 +204,27 @@ export function CustomerJourney2() {
   const pathLength5 = useTransform(scrollYProgress5, [0, 0.5], [0, 1]);
 
   return (
-    <section className="max-w-6xl mx-auto">
+    <section className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
       {/* Section 1 */}
-      <h1 className="max-w-2xl mx-auto text-center">
+      <p className="max-w-2xl mx-auto text-center text-3xl md:text-4xl lg:text-5xl">
         What Is The Process Working With An AI Agency?
-      </h1>
+      </p>
 
-      <div ref={section1Ref} className="grid grid-cols-2 mt-32 gap-10">
+      <div
+        ref={section1Ref}
+        className="grid grid-cols-1 md:grid-cols-2 mt-32 md:mt-32 gap-10"
+      >
         {/* left */}
-        <div className="col-span-1 space-y-5">
+        <div className="col-span-1 space-y-3 md:space-y-5 order-1">
           <div className="relative">
-            {/* SVG with animated path */}
+            {/* SVG with animated path - Same for all screen sizes */}
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 130 268"
               width="130"
               height="268"
               preserveAspectRatio="xMidYMid meet"
-              className="absolute -bottom-5 -left-10"
+              className="absolute -bottom-5 -left-10 hidden md:block"
             >
               <defs>
                 <linearGradient
@@ -263,11 +266,62 @@ export function CustomerJourney2() {
                 style={{ pathLength: pathLength1 }}
               />
             </motion.svg>
-            <h3 className="text-8xl">1</h3>
-          </div>
-          <h2 className="text-5xl">Get A Ballpark</h2>
 
-          <p className="text-lg">
+            {/* Mobile SVG */}
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 130 268"
+              width="100"
+              height="268"
+              preserveAspectRatio="xMidYMid meet"
+              className="absolute -bottom-10 -left-8 block md:hidden"
+            >
+              <defs>
+                <linearGradient
+                  id="lineGradientMobile1"
+                  spreadMethod="pad"
+                  gradientUnits="userSpaceOnUse"
+                  x1="-162.739"
+                  y1="-255.733"
+                  x2="-151.310"
+                  y2="33.228"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="rgb(109,78,193)"
+                    stopOpacity="0"
+                  ></stop>
+                  <stop
+                    offset="50%"
+                    stopColor="rgb(94,132,205)"
+                    stopOpacity="0.5"
+                  ></stop>
+                  <stop
+                    offset="100%"
+                    stopColor="rgb(79,185,217)"
+                    stopOpacity="1"
+                  ></stop>
+                </linearGradient>
+              </defs>
+              <motion.path
+                d="M-169,-334 C-169,-282 -168,-98 -168,-62"
+                transform="matrix(1,0,0,1,233.5,260)"
+                stroke="url(#lineGradientMobile1)"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fillOpacity="0"
+                strokeOpacity="0.4"
+                strokeWidth="128"
+                initial={{ pathLength: 0 }}
+                style={{ pathLength: pathLength1 }}
+              />
+            </motion.svg>
+
+            <h3 className="text-5xl md:text-6xl lg:text-8xl">1</h3>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl">Get A Ballpark</h2>
+
+          <p className="text-base md:text-lg">
             Meet with the founders, your product manager, and the AI engineers
             BEFORE the engagement begins. Our goal is to focus on how to get
             your decision makers to the magic moment with AI.
@@ -275,29 +329,32 @@ export function CustomerJourney2() {
         </div>
 
         {/* right */}
-        <div className="col-span-1">
-          <img src="/svg/customer1.svg" alt="" />
+        <div className="col-span-1 order-2 flex justify-center">
+          <img src="/svg/customer1.svg" alt="" className="w-full max-w-md" />
         </div>
       </div>
 
       {/* Section 2 */}
-      <div ref={section2Ref} className="grid grid-cols-2 mt-96 gap-10">
+      <div
+        ref={section2Ref}
+        className="grid grid-cols-1 md:grid-cols-2 mt-32 md:mt-72 lg:mt-96 gap-10"
+      >
         {/* left */}
-        <div className="col-span-1">
-          <img src="/svg/customer1.svg" alt="" />
+        <div className="col-span-1 order-2 md:order-1 flex justify-center">
+          <img src="/svg/customer1.svg" alt="" className="w-full max-w-md" />
         </div>
 
         {/* right */}
-        <div className="col-span-1 space-y-5">
+        <div className="col-span-1 space-y-3 md:space-y-5 order-1 md:order-2">
           <div className="relative">
-            {/* SVG with animated path */}
+            {/* Desktop SVG */}
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 464 520"
               width="464"
               height="520"
               preserveAspectRatio="xMidYMid meet"
-              className="absolute -bottom-5 -left-[23rem]"
+              className="absolute -bottom-5 -left-10 md:-left-[10rem] lg:-left-[23rem] hidden md:block"
             >
               <defs>
                 <linearGradient
@@ -339,11 +396,62 @@ export function CustomerJourney2() {
                 style={{ pathLength: pathLength2 }}
               />
             </motion.svg>
-            <h3 className="text-8xl">2</h3>
-          </div>
-          <h2 className="text-5xl">Get A Ballpark</h2>
 
-          <p className="text-lg">
+            {/* Mobile SVG */}
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 130 268"
+              width="100"
+              height="268"
+              preserveAspectRatio="xMidYMid meet"
+              className="absolute -bottom-10 -left-8 block md:hidden"
+            >
+              <defs>
+                <linearGradient
+                  id="lineGradientMobile1"
+                  spreadMethod="pad"
+                  gradientUnits="userSpaceOnUse"
+                  x1="-162.739"
+                  y1="-255.733"
+                  x2="-151.310"
+                  y2="33.228"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="rgb(109,78,193)"
+                    stopOpacity="0"
+                  ></stop>
+                  <stop
+                    offset="50%"
+                    stopColor="rgb(94,132,205)"
+                    stopOpacity="0.5"
+                  ></stop>
+                  <stop
+                    offset="100%"
+                    stopColor="rgb(79,185,217)"
+                    stopOpacity="1"
+                  ></stop>
+                </linearGradient>
+              </defs>
+              <motion.path
+                d="M-169,-334 C-169,-282 -168,-98 -168,-62"
+                transform="matrix(1,0,0,1,233.5,260)"
+                stroke="url(#lineGradientMobile1)"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fillOpacity="0"
+                strokeOpacity="0.4"
+                strokeWidth="128"
+                initial={{ pathLength: 0 }}
+                style={{ pathLength: pathLength2 }}
+              />
+            </motion.svg>
+
+            <h3 className="text-5xl md:text-6xl lg:text-8xl">2</h3>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl">Get A Ballpark</h2>
+
+          <p className="text-base md:text-lg">
             Meet with the founders, your product manager, and the AI engineers
             BEFORE the engagement begins. Our goal is to focus on how to get
             your decision makers to the magic moment with AI.
@@ -352,18 +460,21 @@ export function CustomerJourney2() {
       </div>
 
       {/* Section 3 */}
-      <div ref={section3Ref} className="grid grid-cols-2 mt-72 gap-10">
+      <div
+        ref={section3Ref}
+        className="grid grid-cols-1 md:grid-cols-2 mt-32 md:mt-60 lg:mt-72 gap-10"
+      >
         {/* left */}
-        <div className="col-span-1 space-y-5">
+        <div className="col-span-1 space-y-3 md:space-y-5 order-1">
           <div className="relative">
-            {/* SVG with animated path */}
+            {/* Desktop SVG */}
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 688 392"
               width="688"
               height="392"
               preserveAspectRatio="xMidYMid meet"
-              className="absolute -bottom-5 -left-16 min-w-3xl"
+              className="absolute -bottom-5 -left-10 md:-left-16 min-w-3xl hidden md:block"
             >
               <defs>
                 <linearGradient
@@ -415,11 +526,62 @@ export function CustomerJourney2() {
                 style={{ pathLength: pathLength3 }}
               />
             </motion.svg>
-            <h3 className="text-8xl">3</h3>
-          </div>
-          <h2 className="text-5xl">Get A Ballpark</h2>
 
-          <p className="text-lg">
+            {/* Mobile SVG */}
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 130 268"
+              width="100"
+              height="268"
+              preserveAspectRatio="xMidYMid meet"
+              className="absolute -bottom-10 -left-8 block md:hidden"
+            >
+              <defs>
+                <linearGradient
+                  id="lineGradientMobile1"
+                  spreadMethod="pad"
+                  gradientUnits="userSpaceOnUse"
+                  x1="-162.739"
+                  y1="-255.733"
+                  x2="-151.310"
+                  y2="33.228"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="rgb(109,78,193)"
+                    stopOpacity="0"
+                  ></stop>
+                  <stop
+                    offset="50%"
+                    stopColor="rgb(94,132,205)"
+                    stopOpacity="0.5"
+                  ></stop>
+                  <stop
+                    offset="100%"
+                    stopColor="rgb(79,185,217)"
+                    stopOpacity="1"
+                  ></stop>
+                </linearGradient>
+              </defs>
+              <motion.path
+                d="M-169,-334 C-169,-282 -168,-98 -168,-62"
+                transform="matrix(1,0,0,1,233.5,260)"
+                stroke="url(#lineGradientMobile1)"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fillOpacity="0"
+                strokeOpacity="0.4"
+                strokeWidth="128"
+                initial={{ pathLength: 0 }}
+                style={{ pathLength: pathLength3 }}
+              />
+            </motion.svg>
+
+            <h3 className="text-5xl md:text-6xl lg:text-8xl">3</h3>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl">Get A Ballpark</h2>
+
+          <p className="text-base md:text-lg">
             Meet with the founders, your product manager, and the AI engineers
             BEFORE the engagement begins. Our goal is to focus on how to get
             your decision makers to the magic moment with AI.
@@ -427,30 +589,32 @@ export function CustomerJourney2() {
         </div>
 
         {/* right */}
-        <div className="col-span-1">
-          <img src="/svg/customer1.svg" alt="" />
+        <div className="col-span-1 order-2 flex justify-center">
+          <img src="/svg/customer1.svg" alt="" className="w-full max-w-md" />
         </div>
       </div>
 
       {/* Section 4 */}
-      {/* Section 4 */}
-      <div ref={section4Ref} className="grid grid-cols-2 mt-72 gap-10">
+      <div
+        ref={section4Ref}
+        className="grid grid-cols-1 md:grid-cols-2 mt-32 md:mt-60 lg:mt-72 gap-10"
+      >
         {/* left */}
-        <div className="col-span-1">
-          <img src="/svg/customer1.svg" alt="" />
+        <div className="col-span-1 order-2 md:order-1 flex justify-center">
+          <img src="/svg/customer1.svg" alt="" className="w-full max-w-md" />
         </div>
 
         {/* right */}
-        <div className="col-span-1 space-y-5">
+        <div className="col-span-1 space-y-3 md:space-y-5 order-1 md:order-2">
           <div className="relative">
-            {/* SVG with animated path */}
+            {/* Desktop SVG */}
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 464 520"
               width="464"
               height="520"
               preserveAspectRatio="xMidYMid meet"
-              className="absolute -bottom-5 right-72 min-w-3xl"
+              className="absolute -bottom-5 -left-10 md:left-auto md:right-16 lg:right-72 min-w-3xl hidden md:block"
             >
               <defs>
                 <linearGradient
@@ -492,10 +656,61 @@ export function CustomerJourney2() {
                 style={{ pathLength: pathLength4 }}
               />
             </motion.svg>
-            <h3 className="text-8xl">4</h3>
+
+            {/* Mobile SVG */}
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 130 268"
+              width="100"
+              height="268"
+              preserveAspectRatio="xMidYMid meet"
+              className="absolute -bottom-10 -left-8 block md:hidden"
+            >
+              <defs>
+                <linearGradient
+                  id="lineGradientMobile1"
+                  spreadMethod="pad"
+                  gradientUnits="userSpaceOnUse"
+                  x1="-162.739"
+                  y1="-255.733"
+                  x2="-151.310"
+                  y2="33.228"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="rgb(109,78,193)"
+                    stopOpacity="0"
+                  ></stop>
+                  <stop
+                    offset="50%"
+                    stopColor="rgb(94,132,205)"
+                    stopOpacity="0.5"
+                  ></stop>
+                  <stop
+                    offset="100%"
+                    stopColor="rgb(79,185,217)"
+                    stopOpacity="1"
+                  ></stop>
+                </linearGradient>
+              </defs>
+              <motion.path
+                d="M-169,-334 C-169,-282 -168,-98 -168,-62"
+                transform="matrix(1,0,0,1,233.5,260)"
+                stroke="url(#lineGradientMobile1)"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fillOpacity="0"
+                strokeOpacity="0.4"
+                strokeWidth="128"
+                initial={{ pathLength: 0 }}
+                style={{ pathLength: pathLength4 }}
+              />
+            </motion.svg>
+
+            <h3 className="text-5xl md:text-6xl lg:text-8xl">4</h3>
           </div>
-          <h2 className="text-5xl">Get A Ballpark</h2>
-          <p className="text-lg">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl">Get A Ballpark</h2>
+          <p className="text-base md:text-lg">
             Meet with the founders, your product manager, and the AI engineers
             BEFORE the engagement begins. Our goal is to focus on how to get
             your decision makers to the magic moment with AI.
@@ -504,19 +719,21 @@ export function CustomerJourney2() {
       </div>
 
       {/* Section 5 */}
-      {/* Section 5 */}
-      <div ref={section5Ref} className="grid grid-cols-2 mt-72 gap-10">
+      <div
+        ref={section5Ref}
+        className="grid grid-cols-1 md:grid-cols-2 mt-32 md:mt-60 lg:mt-72 gap-10 mb-20"
+      >
         {/* left */}
-        <div className="col-span-1 space-y-5">
+        <div className="col-span-1 space-y-3 md:space-y-5 order-1">
           <div className="relative">
-            {/* SVG with animated path */}
+            {/* Desktop SVG */}
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 688 392"
               width="688"
               height="392"
               preserveAspectRatio="xMidYMid meet"
-              className="absolute -bottom-5 -left-20 min-w-3xl"
+              className="absolute -bottom-5 -left-10 md:-left-20 min-w-3xl hidden md:block"
             >
               <defs>
                 <linearGradient
@@ -568,10 +785,61 @@ export function CustomerJourney2() {
                 style={{ pathLength: pathLength5 }}
               />
             </motion.svg>
-            <h3 className="text-8xl">5</h3>
+
+            {/* Mobile SVG */}
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 130 268"
+              width="100"
+              height="268"
+              preserveAspectRatio="xMidYMid meet"
+              className="absolute -bottom-10 -left-8 block md:hidden"
+            >
+              <defs>
+                <linearGradient
+                  id="lineGradientMobile1"
+                  spreadMethod="pad"
+                  gradientUnits="userSpaceOnUse"
+                  x1="-162.739"
+                  y1="-255.733"
+                  x2="-151.310"
+                  y2="33.228"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="rgb(109,78,193)"
+                    stopOpacity="0"
+                  ></stop>
+                  <stop
+                    offset="50%"
+                    stopColor="rgb(94,132,205)"
+                    stopOpacity="0.5"
+                  ></stop>
+                  <stop
+                    offset="100%"
+                    stopColor="rgb(79,185,217)"
+                    stopOpacity="1"
+                  ></stop>
+                </linearGradient>
+              </defs>
+              <motion.path
+                d="M-169,-334 C-169,-282 -168,-98 -168,-62"
+                transform="matrix(1,0,0,1,233.5,260)"
+                stroke="url(#lineGradientMobile1)"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fillOpacity="0"
+                strokeOpacity="0.4"
+                strokeWidth="128"
+                initial={{ pathLength: 0 }}
+                style={{ pathLength: pathLength5 }}
+              />
+            </motion.svg>
+
+            <h3 className="text-5xl md:text-6xl lg:text-8xl">5</h3>
           </div>
-          <h2 className="text-5xl">Get A Ballpark</h2>
-          <p className="text-lg">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl">Get A Ballpark</h2>
+          <p className="text-base md:text-lg">
             Meet with the founders, your product manager, and the AI engineers
             BEFORE the engagement begins. Our goal is to focus on how to get
             your decision makers to the magic moment with AI.
@@ -579,8 +847,8 @@ export function CustomerJourney2() {
         </div>
 
         {/* right */}
-        <div className="col-span-1">
-          <img src="/svg/customer1.svg" alt="" />
+        <div className="col-span-1 order-1 flex justify-center">
+          <img src="/svg/customer1.svg" alt="" className="w-full max-w-md" />
         </div>
       </div>
     </section>

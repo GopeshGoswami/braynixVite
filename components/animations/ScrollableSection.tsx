@@ -182,10 +182,17 @@ export default function ScrollableSection() {
 
   return (
     <>
-      <div className="flex max-w-7xl mx-auto relative min-h-screen">
+      <div className="flex flex-col lg:flex-row max-w-7xl mx-auto relative min-h-screen">
+        {/* Header for mobile screens */}
+        <div className="block lg:hidden p-4">
+          <p className="text-3xl md:text-6xl mb-6 text-center">
+            We are making bold moves together
+          </p>
+        </div>
+
         {/* Left fixed section with headers */}
-        <div className="w-1/3 sticky top-32 p-8 shadow-md max-h-screen overflow-y-auto">
-          <div className="">
+        <div className="hidden lg:block w-1/3 sticky top-32 p-8 shadow-md max-h-screen overflow-y-auto">
+          <div>
             <h1 className="text-3xl font-bold mb-10">
               We are making bold moves together
             </h1>
@@ -209,8 +216,8 @@ export default function ScrollableSection() {
         </div>
 
         {/* Right scrollable section with cards */}
-        <div className="w-2/3 overflow-y-auto p-8">
-          <div className="space-y-24 pb-24">
+        <div className="w-full lg:w-2/3 overflow-y-auto p-4 sm:p-8">
+          <div className="space-y-16 sm:space-y-24 pb-16 sm:pb-24">
             {sections.map((section, index) => (
               <div
                 key={section.id}
@@ -220,8 +227,12 @@ export default function ScrollableSection() {
                 className="scroll-mt-8"
               >
                 <div className="mb-4">
-                  <h2 className="text-2xl font-bold mb-2">{section.title}</h2>
-                  <p className="text-gray-700 mb-6">{section.content}</p>
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2">
+                    {section.title}
+                  </h2>
+                  <p className="text-gray-700 text-sm sm:text-base mb-6">
+                    {section.content}
+                  </p>
                 </div>
                 <BentoCard type="bento" {...section.feature} />
               </div>
