@@ -1,5 +1,5 @@
 import { Home, User, Briefcase, FileText } from "lucide-react";
-import { NavBar } from "../components/Animations/tublight-nav";
+import { NavBar } from "./animations/TublightNav";
 
 export function Navbar() {
   const navItems = [
