@@ -9,6 +9,7 @@ import { TestimonialsTwo } from "../components/animations/slider/Testimonial";
 import { FaqNew } from "../components/faq/FaqNew";
 import { CustomerJourney2 } from "../components/CustomerJourney";
 import CTA from "../components/CTA";
+import Industries from "../components/Industries";
 import {
   OurProducts,
   OurProducts2,
@@ -23,22 +24,23 @@ function App() {
       <StarsMain />
       <section className="space-y-32 sm:space-y-44 md:space-y-60 ">
         <BentoGridTwo />
+        <Industries />
         {/* <DeliveredProjects /> */}
         <DeliveredProjects2 />
         <div className="px-4 xl:px-0">
           <CustomerJourney2 />
         </div>
         <ScrollableSection />
-        <AIService />
+        {/* <AIService /> */}
         {/* <BentoGrid /> */}
         <InNumbers />
-        <TrustedBy />
+        {/* <TrustedBy /> */}
         <TestimonialsTwo />
         <div className="md:hidden block">
           <OurProducts />
         </div>
         <div className="md:block hidden max-w-4xl mx-auto">
-          <OurProducts2 />
+          {/* <OurProducts2 /> */}
         </div>
         {/* <Faq /> */}
         <FaqNew />

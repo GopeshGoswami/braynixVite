@@ -131,7 +131,7 @@ const Card = ({ data }: any) => {
           />
           <div className="space-y-3">
             <motion.p className="text-xl md:text-3xl" variants={textVariants}>
-              {data.title} {data.id}
+              {data.title}
             </motion.p>
             <div className="space-y-6">
               <motion.p className="text-sm md:text-lg" variants={textVariants}>
@@ -203,7 +203,7 @@ const cardsData = [
   {
     id: 2,
     logoSrc: "/images/pawzibleLogo.svg",
-    title: "Pawzible",
+    title: "CareerX",
     description:
       "Best Medical online service. Best Medical online service. Best Medical online service.",
     link: "/",
@@ -211,7 +211,7 @@ const cardsData = [
   {
     id: 3,
     logoSrc: "/images/pawzibleLogo.svg",
-    title: "Pawzible",
+    title: "VITMEDS",
     description:
       "Best Medical online service. Best Medical online service. Best Medical online service.",
     link: "/",
@@ -219,7 +219,7 @@ const cardsData = [
   {
     id: 4,
     logoSrc: "/images/pawzibleLogo.svg",
-    title: "Pawzible",
+    title: "Enhealth",
     description:
       "Best Medical online service. Best Medical online service. Best Medical online service.",
     link: "/",
@@ -227,15 +227,7 @@ const cardsData = [
   {
     id: 5,
     logoSrc: "/images/pawzibleLogo.svg",
-    title: "Pawzible",
-    description:
-      "Best Medical online service. Best Medical online service. Best Medical online service.",
-    link: "/",
-  },
-  {
-    id: 6,
-    logoSrc: "/images/pawzibleLogo.svg",
-    title: "Pawzible",
+    title: "Legalscout",
     description:
       "Best Medical online service. Best Medical online service. Best Medical online service.",
     link: "/",

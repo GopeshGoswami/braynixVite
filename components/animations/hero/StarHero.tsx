@@ -4,6 +4,11 @@ import { ButtonsCard } from "../border-btn";
 export default function StarHero() {
   return (
     <div className="h-screen pb-10 w-full bg-black relative overflow-hidden">
+      <img
+        src="/images/handsBG.png"
+        alt=""
+        className="absolute bottom-0 z-[100]"
+      />
       {/* Background with stars */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.15)_0%,rgba(0,0,0,0)_80%)]" />
@@ -18,9 +23,13 @@ export default function StarHero() {
           </span>
           <br />
           <span
-            className={
-              "bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300 "
-            }
+            className="bg-clip-text text-transparent"
+            style={{
+              background:
+                "linear-gradient(91.75deg, #A100FF 47.83%, #00B3FF 94.4%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
           >
             Crafting Exceptional Websites
           </span>

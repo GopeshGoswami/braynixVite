@@ -18,111 +18,158 @@ export default function ScrollableSection() {
   const sections = [
     {
       id: "section1",
-      title: "Getting Started",
+      title: "Case-Studies",
       content:
-        "This is the introduction to our platform. We provide innovative solutions to help you achieve your goals. Our team is dedicated to ensuring you have the best experience possible.",
-      feature: {
-        Icon: FileTextIcon,
-        name: "AI Service",
-        description:
-          "Real-time metrics with AI-powered insights and predictive analytics",
-        href: "/",
-        cta: "Learn more",
-        background: (
-          <img
-            src="/images/dataService.png"
-            className="absolute h-full opacity-30 object-cover"
-            alt="AI Service"
-          />
-        ),
-        className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
-      },
+        "This is the introduction to our platform. We provide innovative solutions to help you achieve your goals.",
+      cards: [
+        {
+          Icon: FileTextIcon,
+          name: "AI Service",
+          description:
+            "Real-time metrics with AI-powered insights and predictive analytics",
+          href: "/",
+          cta: "Learn more",
+          background: (
+            <img
+              src="/images/dataService.png"
+              className="absolute h-full opacity-30 object-cover"
+              alt="AI Service"
+            />
+          ),
+        },
+        {
+          Icon: InputIcon,
+          name: "Full Text Search",
+          description: "Search through all your files in one place.",
+          href: "/",
+          cta: "Learn more",
+          background: (
+            <img
+              src="/images/dataService.png"
+              className="absolute h-full opacity-30 object-cover"
+              alt="Full Text Search"
+            />
+          ),
+        },
+        {
+          Icon: CalendarIcon,
+          name: "Calendar",
+          description: "Use the calendar to filter your files by date.",
+          href: "/",
+          cta: "Learn more",
+          background: (
+            <img
+              src="/images/dataService.png"
+              className="absolute h-full opacity-30 object-cover"
+              alt="Calendar"
+            />
+          ),
+        },
+      ],
     },
     {
       id: "section2",
-      title: "Features Overview",
+      title: "Generative AI",
       content:
-        "Explore our comprehensive suite of features designed to enhance productivity and streamline your workflow. From intuitive dashboards to powerful analytics, we have everything you need.",
-      feature: {
-        Icon: InputIcon,
-        name: "Full text search",
-        description: "Search through all your files in one place.",
-        href: "/",
-        cta: "Learn more",
-        background: (
-          <img
-            src="/images/dataService.png"
-            className="absolute h-full opacity-30 object-cover"
-            alt="Full text search"
-          />
-        ),
-        className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
-      },
+        "Explore our comprehensive suite of features designed to enhance productivity and streamline your workflow.",
+      cards: [
+        {
+          Icon: GlobeIcon,
+          name: "Multilingual",
+          description: "Supports 100+ languages and counting.",
+          href: "/",
+          cta: "Learn more",
+          background: (
+            <img
+              src="/images/dataService.png"
+              className="absolute h-full opacity-30 object-cover"
+              alt="Multilingual"
+            />
+          ),
+        },
+        {
+          Icon: BellIcon,
+          name: "Notifications",
+          description:
+            "Get notified when someone shares a file or mentions you in a comment.",
+          href: "/",
+          cta: "Learn more",
+          background: (
+            <img
+              src="/images/dataService.png"
+              className="absolute h-full opacity-30 object-cover"
+              alt="Notifications"
+            />
+          ),
+        },
+        {
+          Icon: FileTextIcon,
+          name: "File Management",
+          description: "Organize and manage your files efficiently.",
+          href: "/",
+          cta: "Learn more",
+          background: (
+            <img
+              src="/images/dataService.png"
+              className="absolute h-full opacity-30 object-cover"
+              alt="File Management"
+            />
+          ),
+        },
+      ],
     },
     {
       id: "section3",
-      title: "Case Studies",
+      title: "Publications",
       content:
-        "Discover how our clients have transformed their businesses using our platform. Real-world examples showcase the impact of our solutions across various industries.",
-      feature: {
-        Icon: GlobeIcon,
-        name: "Multilingual",
-        description: "Supports 100+ languages and counting.",
-        href: "/",
-        cta: "Learn more",
-        background: (
-          <img
-            src="/images/dataService.png"
-            className="absolute h-full opacity-30 object-cover"
-            alt="Multilingual"
-          />
-        ),
-        className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
-      },
+        "Explore our comprehensive suite of features designed to enhance productivity and streamline your workflow.",
+      cards: [
+        {
+          Icon: GlobeIcon,
+          name: "Multilingual",
+          description: "Supports 100+ languages and counting.",
+          href: "/",
+          cta: "Learn more",
+          background: (
+            <img
+              src="/images/dataService.png"
+              className="absolute h-full opacity-30 object-cover"
+              alt="Multilingual"
+            />
+          ),
+        },
+        {
+          Icon: BellIcon,
+          name: "Notifications",
+          description:
+            "Get notified when someone shares a file or mentions you in a comment.",
+          href: "/",
+          cta: "Learn more",
+          background: (
+            <img
+              src="/images/dataService.png"
+              className="absolute h-full opacity-30 object-cover"
+              alt="Notifications"
+            />
+          ),
+        },
+        {
+          Icon: FileTextIcon,
+          name: "File Management",
+          description: "Organize and manage your files efficiently.",
+          href: "/",
+          cta: "Learn more",
+          background: (
+            <img
+              src="/images/dataService.png"
+              className="absolute h-full opacity-30 object-cover"
+              alt="File Management"
+            />
+          ),
+        },
+      ],
     },
-    {
-      id: "section4",
-      title: "Pricing Plans",
-      content:
-        "Choose from our flexible pricing options designed to accommodate businesses of all sizes. Whether you're a startup or an enterprise, we have a plan that fits your needs.",
-      feature: {
-        Icon: CalendarIcon,
-        name: "Calendar",
-        description: "Use the calendar to filter your files by date.",
-        href: "/",
-        cta: "Learn more",
-        background: (
-          <img
-            src="/images/dataService.png"
-            className="absolute h-full opacity-30 object-cover"
-            alt="Calendar"
-          />
-        ),
-        className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
-      },
-    },
-    {
-      id: "section5",
-      title: "Support & Resources",
-      content:
-        "Access comprehensive documentation, tutorials, and dedicated support to make the most of our platform. Our team is available to assist you every step of the way.",
-      feature: {
-        Icon: BellIcon,
-        name: "Notifications",
-        description:
-          "Get notified when someone shares a file or mentions you in a comment.",
-        href: "/",
-        cta: "Learn more",
-        background: (
-          <img
-            src="/images/dataService.png"
-            className="absolute h-full opacity-30 object-cover"
-            alt="Notifications"
-          />
-        ),
-        className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
-      },
-    },
+    // Add similar structure for section3, section4, and section5
   ];
 
   // Initialize sectionRefs with the correct number of elements
@@ -234,7 +281,9 @@ export default function ScrollableSection() {
                     {section.content}
                   </p>
                 </div>
-                <BentoCard type="bento" {...section.feature} />
+                {section.cards.map((card, cardIndex) => (
+                  <BentoCard key={cardIndex} type="bento" {...card} />
+                ))}
               </div>
             ))}
           </div>

@@ -312,10 +312,11 @@ const SkeletonFive = () => {
 };
 const items = [
   {
-    title: "AI Content Generation",
+    title: "AI-Driven Software Development",
     description: (
       <span className="text-sm">
-        Experience the power of AI in generating unique content.
+        Custom mobile apps, web platforms, and enterprise software with embedded
+        AI features like automation, personalization, or predictive analytics.
       </span>
     ),
     header: <SkeletonOne />,
@@ -323,10 +324,12 @@ const items = [
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Automated Proofreading",
+    title: "Data Analytics & Insights",
     description: (
       <span className="text-sm">
-        Let AI handle the proofreading of your documents.
+        Big data processing, real-time analytics, and machine learning models
+        delivering actionable insights for industries like finance, retail, or
+        healthcare.
       </span>
     ),
     header: <SkeletonTwo />,
@@ -334,10 +337,11 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Contextual Suggestions",
+    title: "Intelligent Interaction Systems",
     description: (
       <span className="text-sm">
-        Get AI-powered suggestions based on your writing.
+        Chatbots, virtual assistants, and NLP tools designed for seamless
+        customer support, marketing, or internal process enhancement.
       </span>
     ),
     header: <SkeletonThree />,
@@ -345,10 +349,11 @@ const items = [
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Sentiment Analysis",
+    title: "Computer Vision & Imaging",
     description: (
       <span className="text-sm">
-        Understand the sentiment of your text with AI analysis.
+        Image recognition, video analytics, and visual design solutions for
+        sectors like security, healthcare, or creative industries.
       </span>
     ),
     header: <SkeletonFour />,
@@ -357,10 +362,11 @@ const items = [
   },
 
   {
-    title: "Text Summarization",
+    title: "AI Consulting & Strategy",
     description: (
       <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
+        End-to-end guidance on AI adoption, integration, and training to
+        maximize client value from tech solutions.
       </span>
     ),
     header: <SkeletonFive />,

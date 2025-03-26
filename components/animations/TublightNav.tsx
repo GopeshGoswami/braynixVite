@@ -1,182 +1,190 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "../../lib/utils";
+import {
+  PieChart,
+  MousePointerClick,
+  Fingerprint,
+  Grid,
+  RefreshCcw,
+  BarChart3,
+} from "lucide-react";
 
 interface NavItem {
   name: string;
   url: string;
-  icon: React.ReactNode;
 }
 
 interface NavBarProps {
   items: NavItem[];
-  className?: string;
 }
 
-export function NavBar({ items, className }: NavBarProps) {
-  const [activeTab, setActiveTab] = useState(items[0].name);
+export function NavBar({ items }: NavBarProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  // const [isMobile, setIsMobile] = useState(false);
-  let dropdownTimeout: NodeJS.Timeout;
-
-  useEffect(() => {
-    const handleResize = () => {
-      // setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
-    <div
-      className={cn(
-        "fixed top-0 left-1/2 -translate-x-1/2 z-50 mb-6 pt-6",
-        className
-      )}
+    <nav
+      className="flex items-center justify-between p-6 lg:px-8 bg-transparent relative z-10"
+      aria-label="Global"
     >
-      <div className="flex items-center gap-3 bg-background/5 border border-border backdrop-blur-lg py-2 px-1 rounded-full shadow-lg">
-        {items.map((item) => {
-          const isActive = activeTab === item.name;
-          const isDropdownActive = activeDropdown === item.name;
-
-          return (
-            <div
-              key={item.name}
-              className="relative"
-              onMouseEnter={() => {
-                clearTimeout(dropdownTimeout);
-                setActiveDropdown(item.name);
-              }}
-              onMouseLeave={() => {
-                dropdownTimeout = setTimeout(() => {
-                  setActiveDropdown(null);
-                }, 200); // Small delay to allow animation visibility
-              }}
+      <div className="flex lg:flex-1">
+        <a href="#" className="-m-1.5 p-1.5">
+          <span className="sr-only">Your Company</span>
+          <img
+            className="h-8 w-auto"
+            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+            alt=""
+          />
+        </a>
+      </div>
+      <div className="flex lg:hidden">
+        <button
+          type="button"
+          className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="size-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+      </div>
+      <div className="hidden lg:flex lg:gap-x-12">
+        {items.map((item) => (
+          <div
+            key={item.name}
+            className="relative"
+            onMouseEnter={() => setActiveDropdown(item.name)}
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
+            <a
+              href={item.url}
+              className="text-sm/6 font-semibold text-white hover:text-indigo-600"
             >
-              <a
-                href={item.url}
-                onClick={() => setActiveTab(item.name)}
-                className={cn(
-                  "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
-                  "text-foreground/80 hover:text-primary",
-                  isActive && "bg-muted text-primary"
-                )}
-              >
-                <span className="inline">{item.name}</span>
-                {/* <span className="md:hidden">{item.icon}</span> */}
-                {/* {isActive && (
-                  <motion.div
-                    layoutId="lamp"
-                    className="absolute inset-0 w-full bg-primary/5 rounded-full -z-10"
-                    initial={false}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 30,
-                    }}
-                  >
-                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-primary rounded-t-full">
-                      <div className="absolute w-12 h-6 bg-primary/20 rounded-full blur-md -top-2 -left-2" />
-                      <div className="absolute w-8 h-6 bg-primary/20 rounded-full blur-md -top-1" />
-                      <div className="absolute w-4 h-4 bg-primary/20 rounded-full blur-sm top-0 left-2" />
+              {item.name}
+            </a>
+            <AnimatePresence>
+              {activeDropdown === item.name && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9, y: -10 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                  transition={{
+                    duration: 0.2,
+                    ease: "easeInOut",
+                  }}
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 text-black w-[40rem] bg-white border border-border rounded-xl shadow-lg"
+                >
+                  <div className="grid grid-cols-2 gap-x-16 gap-y-10">
+                    <div className="flex items-start gap-4 pt-8 px-8 ">
+                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <PieChart className="w-5 h-5 text-gray-600" />
+                      </div>
+                      <div>
+                        <p className="text-base font-medium mb-1">Analytics</p>
+                        <p className="text-sm text-gray-600">
+                          Get a better understanding of your traffic
+                        </p>
+                      </div>
                     </div>
-                  </motion.div>
-                )} */}
-              </a>
 
-              {/* Animated Dropdown */}
-              <AnimatePresence>
-                {isDropdownActive && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9, y: -10 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                    transition={{
-                      duration: 0.2,
-                      ease: "easeInOut",
-                    }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 text-black w-[40rem] bg-white border border-border rounded-xl shadow-lg"
-                  >
-                    <div className="py-10 px-4 grid grid-cols-2 gap-4">
-                      <div className="flex flex-col gap-5">
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 h-6 bg-gray-200 rounded" />
-                          <div>
-                            <p className="text-sm font-medium">Analytics</p>
-                            <p className="text-xs text-gray-500">
-                              Get a better understanding of your traffic
-                            </p>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 h-6 bg-gray-200 rounded" />
-                          <div>
-                            <p className="text-sm font-medium">Engagement</p>
-                            <p className="text-xs text-gray-500">
-                              Speak directly to your customers
-                            </p>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 h-6 bg-gray-200 rounded" />
-                          <div>
-                            <p className="text-sm font-medium">Security</p>
-                            <p className="text-xs text-gray-500">
-                              Your customers' data will be safe
-                            </p>
-                          </div>
-                        </div>
+                    <div className="flex items-start gap-4 pt-8 px-8 ">
+                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <MousePointerClick className="w-5 h-5 text-gray-600" />
                       </div>
-                      <div className="flex flex-col gap-5">
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 h-6 bg-gray-200 rounded" />
-                          <div>
-                            <p className="text-sm font-medium">Integrations</p>
-                            <p className="text-xs text-gray-500">
-                              Connect with third-party tools
-                            </p>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 h-6 bg-gray-200 rounded" />
-                          <div>
-                            <p className="text-sm font-medium">Automations</p>
-                            <p className="text-xs text-gray-500">
-                              Build strategic funnels
-                            </p>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 h-6 bg-gray-200 rounded" />
-                          <div>
-                            <p className="text-sm font-medium">Reports</p>
-                            <p className="text-xs text-gray-500">
-                              Manage and create decisions
-                            </p>
-                          </div>
-                        </div>
+                      <div>
+                        <p className="text-base font-medium mb-1">Engagement</p>
+                        <p className="text-sm text-gray-600">
+                          Speak directly to your customers with our engagement
+                          tool
+                        </p>
                       </div>
                     </div>
-                    <div className="col-span-2 mt-2 bg-gray-100 px-4 py-6 rounded-lg">
-                      <p className="text-sm font-medium">
-                        Enterprise{" "}
-                        <span className="bg-blue-500 text-white text-xs px-2 py-0.5 rounded-full">
+
+                    <div className="flex items-start gap-4 px-8 ">
+                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <Fingerprint className="w-5 h-5 text-gray-600" />
+                      </div>
+                      <div>
+                        <p className="text-base font-medium mb-1">Security</p>
+                        <p className="text-sm text-gray-600">
+                          Your customers' data will be safe and secure
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4 px-8 ">
+                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <Grid className="w-5 h-5 text-gray-600" />
+                      </div>
+                      <div>
+                        <p className="text-base font-medium mb-1">
+                          Integrations
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          Connect with third-party tools and find out
+                          expectations
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4 px-8 ">
+                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <RefreshCcw className="w-5 h-5 text-gray-600" />
+                      </div>
+                      <div>
+                        <p className="text-base font-medium mb-1">
+                          Automations
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          Build strategic funnels that will convert
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4 px-8 ">
+                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <BarChart3 className="w-5 h-5 text-gray-600" />
+                      </div>
+                      <div>
+                        <p className="text-base font-medium mb-1">Reports</p>
+                        <p className="text-sm text-gray-600">
+                          Edit, manage and create newly informed decisions
+                        </p>
+                      </div>
+                    </div>
+                    <div className="col-span-2 mt-6 px-8 py-6 bg-gray-100 rounded-b-xl">
+                      <div className="flex items-center gap-2 mb-1">
+                        <p className="text-lg font-medium">Enterprise</p>
+                        <span className="bg-indigo-100 text-indigo-600 text-xs px-3 py-1 rounded-full">
                           New
                         </span>
-                      </p>
-                      <p className="text-xs text-gray-500">
-                        Empower your team with advanced tools.
+                      </div>
+                      <p className="text-sm text-gray-600">
+                        Empower your entire team with even more advanced tools.
                       </p>
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          );
-        })}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
       </div>
-    </div>
+      <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="#" className="text-sm/6 font-semibold text-white">
+          Log in <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </nav>
   );
 }
