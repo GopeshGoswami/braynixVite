@@ -77,7 +77,7 @@ function AIServiceThree() {
       </h2>
       <BentoGrid className="lg:grid-row">
         {features.map((feature) => (
-          <BentoCard key={feature.name} type="" {...feature} />
+          <BentoCard key={feature.name} type="" {...feature} className="" />
         ))}
       </BentoGrid>
     </section>

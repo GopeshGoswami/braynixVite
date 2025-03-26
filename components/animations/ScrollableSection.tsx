@@ -282,7 +282,12 @@ export default function ScrollableSection() {
                   </p>
                 </div>
                 {section.cards.map((card, cardIndex) => (
-                  <BentoCard key={cardIndex} type="bento" {...card} />
+                  <BentoCard
+                    key={cardIndex}
+                    type="bento"
+                    {...card}
+                    className=""
+                  />
                 ))}
               </div>
             ))}

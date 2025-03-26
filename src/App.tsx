@@ -2,9 +2,9 @@ import BentoGridTwo from "../components/BentoGrid";
 import StarsMain from "../components/animations/stars/index";
 import DeliveredProjects2 from "../components/DeliveredProjects2";
 import ScrollableSection from "../components/animations/ScrollableSection";
-import AIService from "../components/AIService";
+// import AIService from "../components/AIService";
 import InNumbers from "../components/animations/counter/InNumbers";
-import TrustedBy from "../components/animations/slider/TrusterBy";
+// import TrustedBy from "../components/animations/slider/TrusterBy";
 import { TestimonialsTwo } from "../components/animations/slider/Testimonial";
 import { FaqNew } from "../components/faq/FaqNew";
 import { CustomerJourney2 } from "../components/CustomerJourney";
@@ -12,7 +12,7 @@ import CTA from "../components/CTA";
 import Industries from "../components/Industries";
 import {
   OurProducts,
-  OurProducts2,
+  // OurProducts2,
 } from "../components/animations/OurProducts";
 import "./App.css";
 
