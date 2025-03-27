@@ -18,12 +18,12 @@ export default function StarHero() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
         <p className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
-          <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
+          <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 font-eb-garamond ">
             Elevate Your Digital Vision
           </span>
           <br />
           <span
-            className="bg-clip-text text-transparent"
+            className="bg-clip-text text-transparent font-eb-garamond "
             style={{
               background:
                 "linear-gradient(91.75deg, #A100FF 47.83%, #00B3FF 94.4%)",
@@ -36,7 +36,7 @@ export default function StarHero() {
         </p>
 
         <div>
-          <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
+          <p className="text-base font-eb-garamond  sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
             We help you realize your business with application programs that
             suit with your business.
           </p>

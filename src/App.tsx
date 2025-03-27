@@ -10,15 +10,15 @@ import { FaqNew } from "../components/faq/FaqNew";
 import { CustomerJourney2 } from "../components/CustomerJourney";
 import CTA from "../components/CTA";
 import Industries from "../components/Industries";
-import {
-  OurProducts,
-  // OurProducts2,
-} from "../components/animations/OurProducts";
+// import {
+//   OurProducts,
+//   // OurProducts2,
+// } from "../components/animations/OurProducts";
 import "./App.css";
 
 function App() {
   return (
-    <main className="max-w-[100vw] overflow-">
+    <section className="max-w-[100vw] overflow-">
       {/* <HeroThree /> */}
       {/* <StarHero /> */}
       <StarsMain />
@@ -36,9 +36,9 @@ function App() {
         <InNumbers />
         {/* <TrustedBy /> */}
         <TestimonialsTwo />
-        <div className="md:hidden block">
+        {/* <div className="hidden">
           <OurProducts />
-        </div>
+        </div> */}
         <div className="md:block hidden max-w-4xl mx-auto">
           {/* <OurProducts2 /> */}
         </div>
@@ -46,7 +46,7 @@ function App() {
         <FaqNew />
         <CTA />
       </section>
-    </main>
+    </section>
   );
 }
 

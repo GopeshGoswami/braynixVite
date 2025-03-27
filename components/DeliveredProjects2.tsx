@@ -45,7 +45,7 @@ const DeliveredProjects2 = () => {
   return (
     <section className="h-[200vh] relative" ref={targetRef}>
       <div className=" sticky flex flex-col top-32 gap-[52px] min-h-[50vh] overflow-hidden">
-        <h2 className="text-3xl md:text-6xl text-center">
+        <h2 className="text-3xl md:text-6xl text-center font-dm-sans">
           From the Vault - Delivered Projects
         </h2>
         <motion.div ref={containerRef} style={{ x }} className="flex gap-4">
@@ -130,11 +130,17 @@ const Card = ({ data }: any) => {
             alt={`${data.title} logo`}
           />
           <div className="space-y-3">
-            <motion.p className="text-xl md:text-3xl" variants={textVariants}>
+            <motion.p
+              className="font-dm-sans text-xl md:text-3xl"
+              variants={textVariants}
+            >
               {data.title}
             </motion.p>
             <div className="space-y-6">
-              <motion.p className="text-sm md:text-lg" variants={textVariants}>
+              <motion.p
+                className="font-dm-sans text-sm md:text-lg"
+                variants={textVariants}
+              >
                 {data.description}
               </motion.p>
               <motion.button

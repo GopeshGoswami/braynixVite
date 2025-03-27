@@ -232,7 +232,7 @@ export default function ScrollableSection() {
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto relative min-h-screen">
         {/* Header for mobile screens */}
         <div className="block lg:hidden p-4">
-          <p className="text-3xl md:text-6xl mb-6 text-center">
+          <p className="text-3xl md:text-6xl mb-6 text-center font-syne">
             We are making bold moves together
           </p>
         </div>
@@ -240,7 +240,7 @@ export default function ScrollableSection() {
         {/* Left fixed section with headers */}
         <div className="hidden lg:block w-1/3 sticky top-32 p-8 shadow-md max-h-screen overflow-y-auto">
           <div>
-            <h1 className="text-3xl font-bold mb-10">
+            <h1 className="text-3xl font-bold mb-10 font-syne">
               We are making bold moves together
             </h1>
             <nav className="space-y-">
@@ -248,7 +248,7 @@ export default function ScrollableSection() {
                 <button
                   key={section.id}
                   onClick={() => scrollToSection(index)}
-                  className={`block text-left text-xl w-full py-2 rounded-lg transition-all duration-300
+                  className={`font-syne block text-left text-xl w-full py-2 rounded-lg transition-all duration-300
                   ${
                     activeSection === index
                       ? "text-white font-semibold shadow-lg transform"
@@ -274,10 +274,10 @@ export default function ScrollableSection() {
                 className="scroll-mt-8"
               >
                 <div className="mb-4">
-                  <h2 className="text-xl sm:text-2xl font-bold mb-2">
+                  <h2 className="font-syne text-xl sm:text-2xl font-bold mb-2">
                     {section.title}
                   </h2>
-                  <p className="text-gray-700 text-sm sm:text-base mb-6">
+                  <p className="font-syne  text-sm sm:text-base mb-6">
                     {section.content}
                   </p>
                 </div>

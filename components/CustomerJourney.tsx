@@ -206,7 +206,7 @@ export function CustomerJourney2() {
   return (
     <section className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
       {/* Section 1 */}
-      <p className="max-w-2xl mx-auto text-center text-3xl md:text-4xl lg:text-5xl">
+      <p className="max-w-2xl mx-auto text-center text-3xl md:text-4xl lg:text-5xl font-manrope">
         What Is The Process Working With An AI Agency?
       </p>
 
@@ -317,11 +317,15 @@ export function CustomerJourney2() {
               />
             </motion.svg>
 
-            <h3 className="text-5xl md:text-6xl lg:text-8xl">1</h3>
+            <h3 className="font-manrope  text-5xl md:text-6xl lg:text-8xl">
+              1
+            </h3>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl">Get A Ballpark</h2>
+          <h2 className="font-manrope text-3xl md:text-4xl lg:text-5xl">
+            Get A Ballpark
+          </h2>
 
-          <p className="text-base md:text-lg">
+          <p className="font-manrope text-base md:text-lg">
             Meet with the founders, your product manager, and the AI engineers
             BEFORE the engagement begins. Our goal is to focus on how to get
             your decision makers to the magic moment with AI.
@@ -447,11 +451,15 @@ export function CustomerJourney2() {
               />
             </motion.svg>
 
-            <h3 className="text-5xl md:text-6xl lg:text-8xl">2</h3>
+            <h3 className="font-manrope  text-5xl md:text-6xl lg:text-8xl">
+              2
+            </h3>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl">Get A Ballpark</h2>
+          <h2 className="font-manrope text-3xl md:text-4xl lg:text-5xl">
+            Get A Ballpark
+          </h2>
 
-          <p className="text-base md:text-lg">
+          <p className="font-manrope text-base md:text-lg">
             Meet with the founders, your product manager, and the AI engineers
             BEFORE the engagement begins. Our goal is to focus on how to get
             your decision makers to the magic moment with AI.
@@ -577,11 +585,15 @@ export function CustomerJourney2() {
               />
             </motion.svg>
 
-            <h3 className="text-5xl md:text-6xl lg:text-8xl">3</h3>
+            <h3 className="font-manrope  text-5xl md:text-6xl lg:text-8xl">
+              3
+            </h3>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl">Get A Ballpark</h2>
+          <h2 className="font-manrope text-3xl md:text-4xl lg:text-5xl">
+            Get A Ballpark
+          </h2>
 
-          <p className="text-base md:text-lg">
+          <p className="font-manrope text-base md:text-lg">
             Meet with the founders, your product manager, and the AI engineers
             BEFORE the engagement begins. Our goal is to focus on how to get
             your decision makers to the magic moment with AI.
@@ -614,7 +626,7 @@ export function CustomerJourney2() {
               width="464"
               height="520"
               preserveAspectRatio="xMidYMid meet"
-              className="absolute -bottom-5 -left-10 md:left-auto md:right-16 lg:right-72 min-w-3xl hidden md:block"
+              className="absolute -bottom-5 -left-10 md:left-auto md:right-16 lg:right-68 min-w-3xl hidden md:block"
             >
               <defs>
                 <linearGradient
@@ -707,10 +719,14 @@ export function CustomerJourney2() {
               />
             </motion.svg>
 
-            <h3 className="text-5xl md:text-6xl lg:text-8xl">4</h3>
+            <h3 className="font-manrope  text-5xl md:text-6xl lg:text-8xl">
+              4
+            </h3>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl">Get A Ballpark</h2>
-          <p className="text-base md:text-lg">
+          <h2 className="font-manrope text-3xl md:text-4xl lg:text-5xl">
+            Get A Ballpark
+          </h2>
+          <p className="font-manrope text-base md:text-lg">
             Meet with the founders, your product manager, and the AI engineers
             BEFORE the engagement begins. Our goal is to focus on how to get
             your decision makers to the magic moment with AI.
@@ -836,10 +852,14 @@ export function CustomerJourney2() {
               />
             </motion.svg>
 
-            <h3 className="text-5xl md:text-6xl lg:text-8xl">5</h3>
+            <h3 className="font-manrope  text-5xl md:text-6xl lg:text-8xl">
+              5
+            </h3>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl">Get A Ballpark</h2>
-          <p className="text-base md:text-lg">
+          <h2 className="font-manrope text-3xl md:text-4xl lg:text-5xl">
+            Get A Ballpark
+          </h2>
+          <p className="font-manrope text-base md:text-lg">
             Meet with the founders, your product manager, and the AI engineers
             BEFORE the engagement begins. Our goal is to focus on how to get
             your decision makers to the magic moment with AI.
