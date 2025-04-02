@@ -1,5 +1,3 @@
-import React from "react";
-
 const OurPeople = () => {
   return (
     <>
@@ -35,35 +33,35 @@ const OurPeople = () => {
 
 export default OurPeople;
 
-const ImageLayout = () => {
-  return (
-    <div className="relative flex items-center justify-center px-4 sm:px-6 lg:px-8 py-5">
-      {/* Middle Image */}
-      <div className="relative z-10 w-full sm:w-1/2 lg:w-1/3">
-        <img
-          src="/images/aboutHero.avif"
-          alt="Office Meeting"
-          className="rounded-xl object-cover w-96 h-96 "
-        />
-      </div>
+// const ImageLayout = () => {
+//   return (
+//     <div className="relative flex items-center justify-center px-4 sm:px-6 lg:px-8 py-5">
+//       {/* Middle Image */}
+//       <div className="relative z-10 w-full sm:w-1/2 lg:w-1/3">
+//         <img
+//           src="/images/aboutHero.avif"
+//           alt="Office Meeting"
+//           className="rounded-xl object-cover w-96 h-96 "
+//         />
+//       </div>
 
-      {/* Left Image */}
-      <div className="absolute bottom-0 left-0 transform translate-x-[-50%] translate-y-[50%] w-full sm:w-1/2 lg:w-1/3">
-        <img
-          src="/images/aboutHero.avif"
-          alt="Beach Scene"
-          className="rounded-xl object-cover w-full h-64"
-        />
-      </div>
+//       {/* Left Image */}
+//       <div className="absolute bottom-0 left-0 transform translate-x-[-50%] translate-y-[50%] w-full sm:w-1/2 lg:w-1/3">
+//         <img
+//           src="/images/aboutHero.avif"
+//           alt="Beach Scene"
+//           className="rounded-xl object-cover w-full h-64"
+//         />
+//       </div>
 
-      {/* Right Image */}
-      <div className="absolute top-0 right-0 transform translate-x-[50%] translate-y-[-50%] w-full sm:w-1/2 lg:w-1/3">
-        <img
-          src="/images/aboutHero.avif"
-          alt="Beach Volleyball"
-          className="rounded-xl object-cover w-full h-64"
-        />
-      </div>
-    </div>
-  );
-};
+//       {/* Right Image */}
+//       <div className="absolute top-0 right-0 transform translate-x-[50%] translate-y-[-50%] w-full sm:w-1/2 lg:w-1/3">
+//         <img
+//           src="/images/aboutHero.avif"
+//           alt="Beach Volleyball"
+//           className="rounded-xl object-cover w-full h-64"
+//         />
+//       </div>
+//     </div>
+//   );
+// };

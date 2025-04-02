@@ -1,5 +1,4 @@
-import { BriefcaseBusiness, Clock, MapPin } from "lucide-react";
-import React from "react";
+import { BriefcaseBusiness, Clock } from "lucide-react";
 
 const Careers = () => {
   const careersData = [

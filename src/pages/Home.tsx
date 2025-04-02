@@ -1,7 +1,7 @@
 import BentoGridTwo from "../../components/BentoGrid";
 import StarsMain from "../../components/animations/stars/index";
 import {
-  DeliveredProjects2,
+  // DeliveredProjects2,
   DeliveredProjects,
 } from "../../components/DeliveredProjects2";
 import ScrollableSection from "../../components/animations/ScrollableSection";

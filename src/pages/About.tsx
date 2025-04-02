@@ -1,4 +1,3 @@
-import React from "react";
 import Timeline from "../../components/about/Timeline";
 import AboutCustomers from "../../components/about/AboutCustomers";
 import OurPeople from "../../components/about/OurPeople";
