@@ -5,7 +5,7 @@ export function Navbar() {
   const navItems = [
     { name: "Home", url: "#", icon: <Home /> },
     {
-      name: "About",
+      name: "About Us",
       url: "#",
       icon: <User />,
       dropdown: [
@@ -22,7 +22,7 @@ export function Navbar() {
       ],
     },
     {
-      name: "Projects",
+      name: "Services",
       url: "#",
       icon: <Briefcase />,
       dropdown: [
@@ -39,7 +39,41 @@ export function Navbar() {
       ],
     },
     {
-      name: "Resume",
+      name: "Careers",
+      url: "#",
+      icon: <FileText />,
+      dropdown: [
+        {
+          title: "Experience",
+          description: "Check my work history",
+          image: "https://source.unsplash.com/200x200/?experience",
+        },
+        {
+          title: "Skills",
+          description: "What I am good at",
+          image: "https://source.unsplash.com/200x200/?skills",
+        },
+      ],
+    },
+    {
+      name: "Research",
+      url: "#",
+      icon: <FileText />,
+      dropdown: [
+        {
+          title: "Experience",
+          description: "Check my work history",
+          image: "https://source.unsplash.com/200x200/?experience",
+        },
+        {
+          title: "Skills",
+          description: "What I am good at",
+          image: "https://source.unsplash.com/200x200/?skills",
+        },
+      ],
+    },
+    {
+      name: "Contact Us",
       url: "#",
       icon: <FileText />,
       dropdown: [

@@ -55,10 +55,10 @@ const InNumbers = () => {
           <div className="flex md:hidden flex-col gap-10 w-full">
             {/* Projects Delivered */}
             <div className="md:flex md:flex-col md:items-start grid grid-cols-2">
-              <p className="text-6xl md:text-9xl font-britannica">
+              <p className="text-6xl md:text-9xl font-helvetica">
                 <Counter from={0} to={20} />+
               </p>
-              <div className="text-sm md:text-xl font-sfProDisplay">
+              <div className="text-sm md:text-xl font-helvetica">
                 <p className="">Successful Projects Delivered</p>
                 <p className="text-[#767676]">in last 1year</p>
               </div>
@@ -67,24 +67,24 @@ const InNumbers = () => {
 
             {/* Clients */}
             <div className="grid grid-cols-2 md:hidden">
-              <p className="text-6xl md:text-9xl font-sfProDisplay">
+              <p className="text-6xl md:text-9xl font-helvetica">
                 <Counter from={0} to={5} />+
               </p>
-              <div className="text-sm md:text-xl font-sfProDisplay">
+              <div className="text-sm md:text-xl font-helvetica">
                 <p className="">Clients</p>
-                <p className="text-[#767676]">in last 1year</p>
+                <p className="text-[#767676] font-helvetica">in last 1year</p>
               </div>
             </div>
             {/* Clients End */}
 
             {/* Countries Served */}
             <div className="grid grid-cols-2 md:hidden">
-              <p className="text-6xl md:text-9xl font-sfProDisplay">
+              <p className="text-6xl md:text-9xl font-helvetica">
                 <Counter from={0} to={5} />+
               </p>
-              <div className="text-sm md:text-xl font-sfProDisplay">
+              <div className="text-sm md:text-xl font-helvetica">
                 <p className="">Countries Served</p>
-                <p className="text-[#767676]">in last 1year</p>
+                <p className="text-[#767676] font-helvetica">in last 1year</p>
               </div>
             </div>
             {/* Countries Served End */}
@@ -109,7 +109,7 @@ const InNumbers = () => {
                   initial={{ scale: 0.8 }}
                   animate={{ scale: 1 }}
                   transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                  className="text-7xl md:text-[150px] font-bold mb-4 font-britannica"
+                  className="text-7xl md:text-[150px] font-bold mb-4 font-helvetica"
                 >
                   {scrollAnimationContent[currentIndex].content}
                 </motion.p>
@@ -119,10 +119,10 @@ const InNumbers = () => {
                   transition={{ delay: 0.2, duration: 0.4 }}
                   className="space-y-2"
                 >
-                  <p className="text-xl md:text-[22px] font-semibold font-britannica">
+                  <p className="text-xl md:text-[22px] font-semibold font-helvetica">
                     {scrollAnimationContent[currentIndex].title}
                   </p>
-                  <p className="text-lg md:text-[22px] text-[#767676] font-britannica">
+                  <p className="text-lg md:text-[22px] text-[#767676] font-helvetica">
                     {scrollAnimationContent[currentIndex].subText}
                   </p>
                 </motion.div>

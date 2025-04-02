@@ -7,7 +7,7 @@ export default function StarHero() {
       <img
         src="/images/handsBG.png"
         alt=""
-        className="absolute bottom-0 z-[100]"
+        className="absolute bottom-0 z-[100] w-screen max-h-[75vh] object-cover"
       />
       {/* Background with stars */}
       <div className="absolute inset-0">
@@ -17,26 +17,18 @@ export default function StarHero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-        <p className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
-          <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 font-eb-garamond ">
-            Elevate Your Digital Vision
-          </span>
-          <br />
-          <span
-            className="bg-clip-text text-transparent font-eb-garamond "
-            style={{
-              background:
-                "linear-gradient(91.75deg, #A100FF 47.83%, #00B3FF 94.4%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Crafting Exceptional Websites
-          </span>
-        </p>
+        <div className="space-y-5 sm:space-y-[10px] z-30">
+          <p className="capitalize text-4xl sm:text-5xl md:text-[84px] text-center leading-[44px] sm:leading-[56px] md:leading-[96px] font-helvetica">
+            Be more{" "}
+            <span className="bg-[linear-gradient(91.75deg,#A100FF_47.83%,#00B3FF_94.4%)] bg-clip-text text-transparent">
+              effective <br className="hidden md:block" /> build software
+            </span>{" "}
+            with us
+          </p>
+        </div>
 
         <div>
-          <p className="text-base font-eb-garamond  sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
+          <p className="text-base font-helvatica  sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
             We help you realize your business with application programs that
             suit with your business.
           </p>

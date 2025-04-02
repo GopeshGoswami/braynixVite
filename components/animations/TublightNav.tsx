@@ -69,7 +69,7 @@ export function NavBar({ items }: NavBarProps) {
             >
               <a
                 href={item.url}
-                className="text-sm/6 font-semibold text-white hover:text-indigo-600"
+                className="text-md font-semibold text-white hover:text-indigo-600 font-helvatica"
               >
                 {item.name}
               </a>

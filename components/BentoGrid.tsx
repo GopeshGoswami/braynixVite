@@ -16,7 +16,7 @@ export default function BentoGridTwo() {
     <>
       <section className="max-w-7xl mx-auto space-y-10 px-4 mt-20">
         <div className="h-full flex items-center justify-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-[64px] leading-normal sm:leading-tight lg:leading-[73px] text-center font-space-grotesk">
+          <h2 className="text-3xl sm:text-4xl lg:text-[64px] leading-normal sm:leading-tight lg:leading-[73px] text-center font-helvatica">
             <CharacterOpacity
               text={
                 "We aim to enhance daily life through technology and are dedicated to making that vision a reality."
@@ -27,7 +27,7 @@ export default function BentoGridTwo() {
       </section>
 
       <section className="max-w-7xl mx-auto space-y-[52px] md:space-y-24 px-4">
-        <h2 className="text-3xl md:text-6xl text-center font-space-grotesk">
+        <h2 className="text-3xl md:text-6xl text-center font-helvatica">
           Our Services
         </h2>
         <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[20rem]">

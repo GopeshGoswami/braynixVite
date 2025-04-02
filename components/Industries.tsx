@@ -29,7 +29,7 @@ const Industries = () => {
   ];
   return (
     <section className="max-w-7xl mx-auto space-y-[52px] md:space-y-24 px-4">
-      <h2 className="text-3xl md:text-6xl text-center font-orbitron">
+      <h2 className="text-3xl md:text-6xl text-center font-helvatica">
         Industries We Work With
       </h2>
 
@@ -44,10 +44,10 @@ const Industries = () => {
                 <p className="text-base font-medium h-8 w-8 rounded-full flex items-center justify-center text-black bg-[#ffb81c]">
                   {card.id}
                 </p>
-                <p className="text-[#ffb81c] font-semibold text-lg font-orbitron">
+                <p className="text-[#ffb81c] font-semibold text-lg font-helvatica">
                   {card.title}
                 </p>
-                <p className="font-orbitron">{card.text}</p>
+                <p className="font-helvatica">{card.text}</p>
                 <motion.img
                   src={card.img}
                   alt=""

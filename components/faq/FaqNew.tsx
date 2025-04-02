@@ -34,10 +34,10 @@ function FaqNew() {
   return (
     <div className="space-y-4 max-w-5xl mx-auto px-4">
       <div className="mx-auto flex  flex-col text-left md:text-center">
-        <h2 className="font-ibm-plex-sans mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
+        <h2 className="font-helvatica mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
           Frequently asked questions
         </h2>
-        <p className="font-ibm-plex-sans text-muted-foreground lg:text-lg">
+        <p className="font-helvatica text-muted-foreground lg:text-lg">
           Find answers to common questions about our products. Can't find what
           you're looking for? Contact our support team.
         </p>
@@ -46,7 +46,7 @@ function FaqNew() {
         {items.map((item) => (
           <AccordionItem value={item.id} key={item.id} className="py-5">
             <AccordionPrimitive.Header className="flex">
-              <AccordionPrimitive.Trigger className="font-ibm-plex-sans flex flex-1 items-center justify-between py-2 text-left text-lg font-semibold leading-6 transition-all [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0 [&[data-state=open]>svg]:rotate-180">
+              <AccordionPrimitive.Trigger className="font-helvatica flex flex-1 items-center justify-between py-2 text-left text-lg font-semibold leading-6 transition-all [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0 [&[data-state=open]>svg]:rotate-180">
                 {item.title}
                 <Plus
                   size={16}
@@ -56,7 +56,7 @@ function FaqNew() {
                 />
               </AccordionPrimitive.Trigger>
             </AccordionPrimitive.Header>
-            <AccordionContent className="font-ibm-plex-sans pb-2 text-base pt-2 opacity-80 text-muted-foreground">
+            <AccordionContent className="font-helvatica pb-2 text-base pt-2 opacity-80 text-muted-foreground">
               {item.content}
             </AccordionContent>
           </AccordionItem>
